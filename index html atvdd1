@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja uninassau  - Tailwind CSS</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Ícones Phosphor -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
+  <!-- NAV BAR -->
+  <header class="sticky top-0 z-40 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <span class="text-2xl font-black tracking-wider text-indigo-600">STORE<span class="text-gray-900">.</span></span>
+        </div>
+
+        <!-- Links de Navegação (Desktop) -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+          <a href="#" class="text-indigo-600 font-semibold">Início</a>
+          <a href="#produtos" class="hover:text-indigo-600 transition">Produtos</a>
+          <a href="#" class="hover:text-indigo-600 transition">Categorias</a>
+          <a href="#" class="hover:text-indigo-600 transition">Ofertas</a>
+        </nav>
+
+        <!-- Ações do Usuário (Busca e Carrinho) -->
+        <div class="flex items-center gap-4">
+          <button aria-label="Buscar" class="p-2 text-gray-600 hover:text-indigo-600 rounded-full hover:bg-gray-100">
+            <i class="ph ph-magnifying-glass text-xl"></i>
+          </button>
+          
+          <button aria-label="Carrinho de Compras" class="relative p-2 text-gray-600 hover:text-indigo-600 rounded-full hover:bg-gray-100">
+            <i class="ph ph-shopping-bag text-xl"></i>
+            <span class="absolute top-1 right-1 bg-indigo-600 text-white text-xs font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="bg-indigo-900 text-white py-16 px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="text-indigo-300 font-semibold text-sm uppercase tracking-wider">Nova Coleção 2026</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold mt-2 mb-4 leading-tight">Tecnologia e Estilo para o seu dia a dia</h1>
+        <p class="text-indigo-100 text-lg mb-6">Aproveite até 30% de desconto em produtos selecionados com frete grátis para todo o Brasil.</p>
+        <a href="#produtos" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition">cuida na promo</a>
+      </div>
+      <div class="flex justify-center">
+        <img src="bandeira-do-brasil-og.webp" alt=""> alt="Headphone Hero" class="rounded-2xl shadow-2xl max-h-80 object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- so teste
+    -->
+  <main id="produtos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="flex justify-between items-end mb-8">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900">Produtos em Destaque</h2>
+        <p class="text-gray-500 text-sm mt-1">Confira as fsaculdades preferidas .</p>
+      </div>
+      <a href="#" class="text-indigo-600 font-semibold hover:underline text-sm hidden sm:block">Ver todos &rarr;</a>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card Produto 1 -->
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between overflow-hidden border border-gray-100 group">
+        <div>
+          <div class="relative overflow-hidden bg-gray-100 aspect-square">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Fone Bluetooth" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-20%</span>
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-indigo-600 font-medium mb-1">Áudio</p>
+            <h3 class="font-semibold text-gray-800 text-base line-clamp-1">Fone de Ouvido Bluetooth Pro</h3>
+            <div class="flex items-center gap-1 mt-2 text-amber-400 text-sm">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star-half"></i>
+              <span class="text-gray-400 text-xs ml-1">(128)</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 pt-0 flex items-center justify-between mt-2">
+          <div>
+            <span class="text-xs text-gray-400 line-through">R$ de gracs pai,00</span>
+            <p class="text-lg font-bold text-gray-900">R$ 319,20</p>
+          </div>
+          <button class="bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white p-2.5 rounded-lg transition">
+            <i class="ph ph-shopping-cart text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card Produto 2 -->
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between overflow-hidden border border-gray-100 group">
+        <div>
+          <div class="relative overflow-hidden bg-gray-100 aspect-square">
+             <img src="FRETE GRATIS.gif" alt="">alt="Smartwatch" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-indigo-600 font-medium mb-1">Wearables</p>
+            <h3 class="font-semibold text-gray-800 text-base line-clamp-1">Smartwatch Sport Minimalist</h3>
+            <div class="flex items-center gap-1 mt-2 text-amber-400 text-sm">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph ph-star"></i>
+              <span class="text-gray-400 text-xs ml-1">(85)</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 pt-0 flex items-center justify-between mt-2">
+          <div>
+            <p class="text-lg font-bold text-gray-900">R$ 549,00</p>
+          </div>
+          <button class="bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white p-2.5 rounded-lg transition">
+            ></li>
+          <li><a href="#" class="hover:text-indigo-600">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-800 mb-3 text-sm">Formas de Pagamento</h4>
+        <div class="flex gap-3 text-2xl text-gray-400">
+          <i class="ph ph-credit-card"></i>
+          <i class="ph ph-qr-code"></i>
+          <i class="ph ph-barcode"></i>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gray-100 text-center text-xs text-gray-400">
+      &copy; 2026 Store Inc. Todos os direitos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
